@@ -1,0 +1,18 @@
+body {
+    cursor: none;
+  }
+  
+
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+ .comic-sans-text {
+  font-family: 'Comic Neue', cursive; /* Use Comic Sans as the font family */
+  /* Add any other styles you need here */
+}

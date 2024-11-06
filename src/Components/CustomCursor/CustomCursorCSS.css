@@ -1,0 +1,28 @@
+@keyframes rotateHue {
+    0% {
+      filter: hue-rotate(0deg) blur(2px);
+    }
+    100% {
+      filter: hue-rotate(360deg) blur(2px);
+    }
+  }
+  
+  .custom-cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2696e8;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    /* transition: transform 0.1s ease; */
+    transform: translate(-50%, -50%);
+    animation: rotateHue 2s infinite;
+    box-shadow: 0 0 20px #2696e8,
+                0 0 60px #2696e8,
+                0 0 100px #2696e8;
+
+  }
+
+  
+  
