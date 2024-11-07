@@ -21,21 +21,24 @@ import ColorChangeButton from './CTA';
 import { Navbar } from "./NavBar/NavBar"
 import { useMediaQuery } from '@mui/material';
 import "../global.css"
-
+import logo from "../images/logo-removebg-preview.png"
 
 function HeroSection({ scrollToHome, scrollToContactUs, scrollToAbout, scrollToFeatures, scrollToFAQ }) {
     const isMobile = useMediaQuery('(max-width:600px)');
 
     return (
         <div style={{ position: 'relative', height: '100%', background: 'linear-gradient(to bottom, black, #1e3c72)' }}>
-            <motion.div
-                style={{ position: 'relative', display: 'flex', alignItems: 'center' }}
-                initial={{ opacity: 0, top: '0px' }}
-                animate={{ opacity: 1, top: '25px' }}
-                transition={{ duration: 0.4, delay: 0 }}
-            >
-                <Navbar scrollToHome={scrollToHome} scrollToContactUs={scrollToContactUs} scrollToAbout={scrollToAbout} scrollToFeatures={scrollToFeatures} scrollToFAQ={scrollToFAQ} />
-            </motion.div>
+            {!isMobile &&
+                <motion.div
+                    style={{ position: 'relative', display: 'flex', alignItems: 'center' }}
+                    initial={{ opacity: 0, top: '0px' }}
+                    animate={{ opacity: 1, top: '25px' }}
+                    transition={{ duration: 0.4, delay: 0 }}
+                >
+                    <Box component='img' src={logo} sx={{ height: isMobile ? '40px' : '80px', width: isMobile ? '60px' : '120px' }} />
+                    <Navbar scrollToHome={scrollToHome} scrollToContactUs={scrollToContactUs} scrollToAbout={scrollToAbout} scrollToFeatures={scrollToFeatures} scrollToFAQ={scrollToFAQ} />
+                </motion.div>
+            }
 
             <Grid container style={{ height: '99%', position: 'relative' }}>
 
