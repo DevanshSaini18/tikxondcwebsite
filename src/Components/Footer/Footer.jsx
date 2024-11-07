@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import ondcImage from "../../images/ondc-image.png"
 import Grid from '@mui/material/Grid2';
 import { IconMailFilled } from "@tabler/icons-react"
+import razorpayriseLogo from "../../images/razorpayrise-logo.png"
 
 function Footer() {
     const isMobile = useMediaQuery('(max-width:600px)');
@@ -45,15 +46,21 @@ function Footer() {
                         }}>
                             <Box
                                 component="img"
-                                sx={{ width: 'auto', height: '100px' }}
+                                sx={{ width: 'auto', height: isMobile ? '50px': '100px' }}
                                 alt="Microsoft logo"
                                 src={microsoftImage}
                             />
                             <Box
                                 component="img"
-                                sx={{ width: 'auto', height: '100px' }}
+                                sx={{ width: 'auto', height: isMobile ? '50px': '100px' }}
                                 alt="ONDC logo"
                                 src={ondcImage}
+                            />
+                            <Box
+                                component="img"
+                                sx={{ width: 'auto', height: isMobile ? '50px': '100px' }}
+                                alt="ONDC logo"
+                                src={razorpayriseLogo}
                             />
                         </div>
 
